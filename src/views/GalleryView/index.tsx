@@ -8,7 +8,7 @@ import { useWalletNfts, NftTokenAccount } from "@nfteyez/sol-rayz-react";
 import { Loader, SolanaLogo, SelectAndConnectWalletButton } from "components";
 import { NftCard } from "./NftCard";
 import styles from "./index.module.css";
-const walletPublicKey = "3EqUrFrjgABCWAnqMYjZ36GcktiwDtFdkNYwY6C6cDzy";
+const walletPublicKey = "Connect Wallet or Paste Wallet Address";
 
 export const GalleryView: FC = ({}) => {
   // const { connection } = useConnection();
@@ -40,15 +40,15 @@ export const GalleryView: FC = ({}) => {
         <div className="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
           <div className="flex-none">
             <button className="btn btn-square btn-ghost">
-              <span className="text-4xl">🏞</span>
+              <span className="text-4xl">🖼️</span>
             </button>
           </div>
           <div className="flex-1 px-2 mx-2">
             <div className="text-sm breadcrumbs">
               <ul className="text-xl">
                 <li>
-                  <Link href="/">
-                    <a>Templates</a>
+                  <Link href="https://shibacouncil.com/">
+                    <a>Home</a>
                   </Link>
                 </li>
                 <li>
@@ -72,18 +72,15 @@ export const GalleryView: FC = ({}) => {
 
                 <div className="w-full min-w-full">
                   <p className="mb-5">
-                    Here is very basic example of NFT Gallery. It parses
-                    mainnet. <br />
-                    And uses{" "}
+                    By {" "}
                     <a
-                      href="https://www.npmjs.com/package/@nfteyez/sol-rayz-react"
+                      href="https://shibacouncil.com/"
                       target="_blank"
                       className="link font-bold"
                       rel="noreferrer"
                     >
-                      @nfteyez/sol-rayz-react
+                      Shiba Council
                     </a>{" "}
-                    package to fetch NFTs for specific wallet.
                   </p>
                   <div>
                     <div className="form-control mt-8">
@@ -113,7 +110,7 @@ export const GalleryView: FC = ({}) => {
                 <div className="my-10">
                   {error ? (
                     <div>
-                      <h1>Error Occures</h1>
+                      <h1>Please enter the correct wallet address</h1>
                       {(error as any)?.message}
                     </div>
                   ) : null}
